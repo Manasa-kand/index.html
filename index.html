@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    body {
+        margin:0;
+        padding:0;
+        background-color: grey;
+        color:white
+    }
+    .navbar{
+        display:flex;
+        justify-content: space-between;
+        padding:0px 100px 0px 50px;
+        height:70px;
+        align-items:center;
+    }
+    .nav-1{
+        display:flex;
+        align-items:center;
+        gap:120px;
+    }
+    .links {
+        display:flex;
+        list-style:none;
+        gap:40px;
+    }
+    .logo{
+        color:yellowgreen;
+        font-size:40px;
+        font-weight: 200;
+        font-style: italic;
+        text-shadow: 2px 2px olivedrab;
+       
+    }
+    .logo::first-letter {
+        color:orange;
+        font-size: 70px;
+    }
+    
+
+    .links li{
+        font-size: 19px;
+        color:orange;
+    }
+    .icons{
+        display:flex;
+        gap:20px;
+    }
+    .icons i{
+        font-size: 18px;
+        color:black;
+    }
+    .one {
+        display:flex;
+        align-items:center;
+        gap:100px;
+        margin-top: 70px;
+    }
+    .left {
+        display:flex;
+        flex-direction: column;
+        padding-left: 240px;
+        align-items: start;
+    }
+    .left1 {
+        font-size:25px;
+        font-style: italic;
+        
+    }
+    .left2 {
+        font-size:20px;
+        font-weight:600;
+        
+    }
+    .left3 {
+        font-size: 25px;
+        font-style: italic;
+        color:orange;
+        margin-bottom: 15px;
+    }
+    .left4 {
+        border:2px solid white;
+        padding:5px 15px;
+        border-radius: 30px;
+        background-color:purple;
+    }
+    .food {
+         border:2px solid white;
+         border-radius: 50%;
+
+    }
+    
+    #food {
+        background: url(../Assets/P1.jpeg);
+        width:500px;
+        height:400px;
+        background-size: cover;
+        
+    }
+    .items {
+        display:flex;
+        padding-left: 150px;
+        margin-top: -50px;
+        gap:20px;
+    }
+    #food1, #food2, #food3, #food4 {
+        border:2px solid white;
+        width:120px;
+        height:120px;
+        border-radius: 50%;
+    }
+    #food1 {
+        background: url(../Assets/pppp.jpeg);
+        background-size: cover;
+    }
+    #food2 {
+        background:url(../Assets/burger.jpeg);
+        background-size:cover;
+    }
+    #food3 {
+        background:url(../Assets/noodles.jpeg);
+        background-size: cover;
+    }
+    #food4 {
+        background:url(../Assets/pasta.jpeg);
+        background-size: cover ;
+    }
+       .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 50px;
+        }
+        .product {
+            background:rgb(194, 206, 170);
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .product:hover {
+            transform: scale(1.05);
+            background-color: goldenrod;
+        }
+        img {
+            width: 230px;
+            max-width: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background:purple;
+        }
+        .cart {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .i {
+            padding: 5px;
+            font-size: larger;
+            font
+        }
+    .info-box {
+    border:5px solid #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    background-color:grey;
+    font-style: italic;
+    font-size: 20px;
+    color: #333;
+    max-width:800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .rating-box {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color:gray;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .stars {
+    font-size: 24px;
+    color: gold;
+    cursor: default;
+  }
+  .feedback-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color:gray;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+        
+    
+</style>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="nav-1">
+                <div class="logo">TASTY BITES</div>
+            <ul class="links">
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li><a href="../html/signin.html">Sign in</a></li>
+                    <li>Location</li>
+                    <li>Contact</li>
+            </ul>
+            </div>
+            <div class="icons"><i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bars"></i> <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+        <div class="one">
+            <div class="left">
+            <span class="left1">Are you Hungry?</span><br>
+            <span class="left2">“Where every bite tells a story.”</span><br>
+            <span class="left3">Let start to order food now</span><br>
+            <span class="left4">Check out Menu</span>
+            
+        </div>
+            <div class="food" id="food"></div>
+        </div>
+        <div class="items">
+            <div id="food1"></div>
+            <div id="food2"></div>
+            <div id="food3"></div>
+            <div id="food4"></div>
+        </div>
+        <div class="container">
+            <div class="info-box">
+            <i>"We bring you a unique dining experience filled with flavor, tradition, and warmth.<br>
+                 Our menu features a delightful selection of authentic and freshly prepared dishes,<br>
+                 crafted using the finest ingredients."</i>
+        </div>
+    </div>
+        <div class="container">
+            <div class="product">
+                <img src="../Assets/noodles.jpeg" alt="Single Bowl">
+                <h2>Noodles Single Bowl</h2>
+                <p>£7.99</p>
+                <button onclick="addToCart('Single Bowl', 7.99)">Add to Cart</button>
+            </div>
+                <div class="product">
+                    <img src="../Assets/burger.jpeg" alt="Single">
+                    <h2>Chicken Burger</h2>
+                    <p>£4.99</p>
+                    <button onclick="addToCart('Chiken Burger', 4.99)">Add to Cart</button>
+                </div>
+                    <div class="product">
+                        <img src="../Assets/pasta.jpeg" alt="Single Bowl">
+                        <h2>Pasta Single Bowl</h2>
+                        <p>£3.99</p>
+                        <button onclick="addToCart('Single Bowl', 3.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="../Assets/bir2.jpeg" alt="Single Bowl">
+                        <h2> Chicken Biryani </h2>
+                        <p>£5.99</p>
+                        <button onclick="addToCart('Single Bowl', 5.99)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product">
+                        <img src="../Assets/bir3.jpeg" alt="Single Bowl">
+                        <h2>Chicken Biryani</h2>
+                        <p>£5.99</p>
+                        <button onclick="addToCart('Single Bowl', 5.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="../Assets/65.jpeg" alt="Single Bowl">
+                        <h2>Chicken 65</h2>
+                        <p>£5.99</p>
+                        <button onclick="addToCart('Single Bowl', 5.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="../Assets/bir3.jpeg" alt="Single Bowl">
+                        <h2>Leg Piece Biryani</h2>
+                        <p>£5.99</p>
+                        <button onclick="addToCart('Single Bowl', 5.99)">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="../Assets/bir3.jpeg" alt="Single Bowl">
+                        <h2>Biryani Single plate</h2>
+                        <p>£5.99</p>
+                        <button onclick="addToCart('Single Bowl', 5.99)">Add to Cart</button>
+                    </div>
+                </div>
+                
+
+    </div>
+    <div class="rating-box">
+        <h3>Rate Your Experience</h3>
+        <div class="stars">
+          ★ ★ ★ ★ ★
+        </div>
+      </div>
+      <div class="feedback-box">
+        <h3>Leave Your Feedback</h3>
+        <textarea placeholder="Write your feedback here..."></textarea>
+        <button>Submit</button>
+      </div>
+    </div>
+    <script>
+        let food = document.getElementById("food");
+        let food1 = document.getElementById("food1");
+        let food2 = document.getElementById("food2");
+        let food3 = document.getElementById("food3");
+        let food4 = document.getElementById("food4");
+        food1.addEventListener("click", ()=>{
+            food.style.backgroundImage= "url('../Assets/pppp.jpeg')";
+        });
+        food2.addEventListener("click", ()=>{
+            food.style.backgroundImage= "url('../Assets/burger.jpeg')";
+        });
+        food3.addEventListener("click", ()=>{
+            food.style.backgroundImage= "url('../Assets/noodles.jpeg')";
+        });
+        food4.addEventListener("click", ()=>{
+            food.style.backgroundImage= "url('../Assets/pasta.jpeg')";
+        });
+    </script>
+</body>
+</html>
